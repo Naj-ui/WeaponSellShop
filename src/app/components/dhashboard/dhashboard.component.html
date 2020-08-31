@@ -1,0 +1,52 @@
+<div class="container dhashboard">
+  <div class=" row d-flex justify-content-center mb-4"> <h3 class="title">[NPC] Beginner Merchant</h3>
+  </div>
+  <div class="desccription row  mb-5">
+  <h6 class="m-0"> Hello Adventurer, welcome to the town of Angular!
+  </h6>
+  <h6 class="m-0"> Here you can explore all the exciting stuff like meeting weird monster, learning new spell, and discovering rare item.
+  But first, you need some weapon/spell to accompany you along the way!
+
+  </h6>
+  <h6 class="m-0"> I will give you 1000 gold, so choose your weapon/spell wisely~
+  </h6>
+  </div>
+
+
+  <div class="menu">
+  <div class="row">
+    <div class="col-4"  *ngFor="let item of items">
+        <app-menu [item]="item"
+         (addToCart)="addToCartFn($event)" 
+         (deleteFromCart)="deleteFromCartFn($event)"
+         ></app-menu>
+    </div>
+
+  </div>
+  </div>
+
+  <div class="result pb-5 mt-3 pt-5">
+      <div class="row title">
+        <div class="col text-bold pl-0"><h5>Added to card </h5></div>
+      </div>
+      <div class="row cart-list" *ngFor="let cart of carts">
+          <div class="col-6 mb-2"> {{cart.name}}</div>
+          <div class="col-6 text-right mb-2">{{cart.price}}</div>
+      </div>
+      <div class="row total pt-4">
+        <div class="col-6 text-bold pl-0">
+          <h5>Total:</h5>
+        </div>
+        <div class="col-6 text-right">
+          {{Total}}
+        </div>
+      </div>
+      <div class="row" (click)="buy()">
+        <button class="btn btn-lg btn-block buyButton ">Buy</button>
+      </div>
+<div *ngIf="showAlert" class="mt-5 mb-2">
+  <alert [type]="typeAlert" [dismissible]="dismissible" (onClosed)="onClosed(alert)">{{ msgAlert}}</alert>
+  </div>
+  </div>
+  
+</div>

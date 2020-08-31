@@ -1,0 +1,18 @@
+<div class="card menu m-2">
+    <div class="card-body">
+      <h5 class="card-title mb-0">{{item.name}}</h5>
+      <p class="card-text mb-0">
+           Price: {{item.price}}</p>
+           <div class="img">
+                   <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+
+           </div>
+<p class="desc mt-4">{{item.desc}}</p>
+      <h6 class=" add-cart" *ngIf="!item.addedToCart"
+      (click)="addToCartFn()"> <i class="fa fa-cart-plus"></i>  Add to cart</h6>
+
+      <h6 class="add-cart added-cart" 
+      *ngIf="item.addedToCart"
+      (click)="deleteFromCartFn()"><i class="fa fa-shopping-cart"></i>  Added to cart</h6>
+    </div>
+  </div>

@@ -1,0 +1,39 @@
+
+.menu{
+    position: relative;
+    width: 18rem;
+    height: 27em;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+.card-text{
+color: rgba(0,0,0,.54);
+}
+.img{text-align: center;
+    img{
+        height: 100px;
+        width: auto;
+        margin-top: 1em;
+        text-align: center;
+    }}
+.desc{
+    font-size: 14px;
+}
+.add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 1em;
+    padding: 12px;
+    &:hover{
+        cursor: pointer;
+        background-color: whitesmoke;
+        border-radius: 5px
+    }
+  
+}
+.added-cart{
+    color: #3f51b5;
+    &:hover{
+       background-color: #f7f8fc;
+    }
+}
+
+}
